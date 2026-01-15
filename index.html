@@ -446,14 +446,8 @@
             gap: 2rem;
         }
 
-        .project-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 2rem;
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
+        a.project-card {
+             text-decoration: none;
         }
 
         .project-card::before {
@@ -844,7 +838,6 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-label">// Cybersecurity Professional</div>
                 <h1>Hi, I'm <span class="gradient-text">Haris Izudin</span></h1>
                 <p>Fresh graduate specializing in cybersecurity with expertise in both offensive security (Red Team) and defensive operations (Blue Team). I secure systems by understanding how they break.</p>
                 <div class="cta-buttons">
@@ -937,17 +930,18 @@
             </div>
             <div class="projects-grid">
                 <!-- Project Card 1: AD Lab -->
-                <div class="project-card">
+                <a href="https://github.com/harisazhr/AD_Penetration_Testing_Lab" class="project-card" target="_blank">
                     <div class="project-header">
                         <div class="project-icon">🔐</div>
                         <div class="project-links">
-                            <a href="https://github.com/harisazhr/ad-pentest-lab" title="GitHub" target="_blank">
+                            <a href="https://github.com/harisazhr/AD_Penetration_Testing_Lab" title="GitHub" target="_blank">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                                 </svg>
                             </a>
                         </div>
-                    </div>
+                        </div>
+                    </a>
                     <h3>Active Directory Penetration Testing Lab</h3>
                     <p>Complete AD environment demonstrating advanced attack chains from Kerberoasting to Golden Tickets, with full SIEM detection using Splunk Enterprise.</p>
                     <div class="project-tags">
@@ -960,17 +954,18 @@
                 </div>
 
                 <!-- Project Card 2: Rabbit Store -->
-                <div class="project-card">
+                <a href="https://github.com/harisazhr/Rabbit_Store_TryHackMe_Writeup" class="project-card" target="_blank">
                     <div class="project-header">
                         <div class="project-icon">🐇</div>
                         <div class="project-links">
-                            <a href="https://github.com/harisazhr/rabbit-store-ctf" title="GitHub" target="_blank">
+                            <a href="https://github.com/harisazhr/Rabbit_Store_TryHackMe_Writeup" title="GitHub" target="_blank">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                                 </svg>
                             </a>
                         </div>
-                    </div>
+                        </div>
+                    </a>
                     <h3>Rabbit Store - TryHackMe CTF</h3>
                     <p>Medium-difficulty challenge showcasing web exploitation through Mass Assignment, SSRF, SSTI, and RabbitMQ service compromise to achieve root access.</p>
                     <div class="project-tags">
@@ -982,17 +977,18 @@
                 </div>
 
                 <!-- Project Card 3: Kioptrix -->
-                <div class="project-card">
+                <a href="https://github.com/harisazhr/Kioptriox-level-1" class="project-card" target="_blank">
                     <div class="project-header">
                         <div class="project-icon">🎯</div>
                         <div class="project-links">
-                            <a href="https://github.com/harisazhr/kioptrix-level1" title="GitHub" target="_blank">
+                            <a href="https://github.com/harisazhr/Kioptriox-level-1" title="GitHub" target="_blank">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                                 </svg>
                             </a>
                         </div>
-                    </div>
+                        </div>
+                    </a>
                     <h3>Kioptrix Level 1 - Vulnerable VM Assessment</h3>
                     <p>Classic Linux penetration test demonstrating buffer overflow exploitation of Samba 2.2.1a (CVE-2003-0201) to achieve root access on deliberately vulnerable system.</p>
                     <div class="project-tags">
@@ -1108,7 +1104,7 @@
                     <div class="cert-info">
                         <h3>CompTIA Security+</h3>
                         <div class="cert-issuer">CompTIA</div>
-                        <div class="cert-date">Certified 2024</div>
+                        <div class="cert-date">Certified 2025</div>
                     </div>
                 </div>
                 <!-- Add more certifications here as you earn them -->
