@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Haris Izudin - Penetration Tester</title>
+    <title>Haris Izudin - Cybersecurity Professional</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;600;700&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
@@ -228,6 +228,11 @@
             animation: pulse 3s ease-in-out infinite;
         }
 
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.05); opacity: 1; }
+        }
+
         .hero::before {
             content: '';
             position: absolute;
@@ -345,6 +350,77 @@
             max-width: 700px;
         }
 
+        /* Platform Badges Section */
+        .platform-badges {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .platform-badge-wrapper {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1rem;
+            transition: all 0.3s;
+            min-width: 300px;
+        }
+
+        .platform-badge-wrapper:hover {
+            border-color: var(--accent-primary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.1);
+        }
+
+        .platform-badge {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+
+        .platform-badge:hover {
+            border-color: var(--accent-primary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.1);
+        }
+
+        .platform-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+        }
+
+        .platform-icon.thm {
+            background: linear-gradient(135deg, #00ff88 0%, #00d4ff 100%);
+        }
+
+        .platform-icon.htb {
+            background: linear-gradient(135deg, #9fef00 0%, #00ff88 100%);
+        }
+
+        .platform-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .platform-info p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-family: 'Azeret Mono', monospace;
+        }
+
         /* Projects Grid */
         .projects-grid {
             display: grid;
@@ -435,6 +511,12 @@
             color: var(--accent-primary);
             border-radius: 4px;
             border: 1px solid rgba(0, 255, 136, 0.2);
+        }
+
+        .tag.blue-team {
+            background: rgba(0, 212, 255, 0.1);
+            color: var(--accent-secondary);
+            border: 1px solid rgba(0, 212, 255, 0.2);
         }
 
         /* Skills Section */
@@ -536,6 +618,15 @@
             font-size: 2.5rem;
             flex-shrink: 0;
             border: 2px solid var(--accent-primary);
+        }
+
+        .cert-badge-credly {
+            width: 150px;
+            height: 270px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
         }
 
         .cert-info h3 {
@@ -686,6 +777,10 @@
                 flex-direction: column;
             }
 
+            .platform-badges {
+                flex-direction: column;
+            }
+
             .projects-grid,
             .skills-grid {
                 grid-template-columns: 1fr;
@@ -722,9 +817,8 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-label">// Cybersecurity Professional</div>
                 <h1>Hi, I'm <span class="gradient-text">Haris Izudin</span></h1>
-                <p>Fresh graduate specializing in penetration testing and offensive security. I break things to make them stronger.</p>
+                <p>Fresh graduate specializing in cybersecurity with expertise in both offensive security (Red Team) and defensive operations (Blue Team). I secure systems by understanding how they break.</p>
                 <div class="cta-buttons">
                     <a href="#projects" class="btn btn-primary">View My Work</a>
                     <a href="#contact" class="btn btn-secondary">Get In Touch</a>
@@ -752,16 +846,16 @@
                         <div class="terminal-line">&nbsp;</div>
                         <div class="terminal-line">
                             <span class="terminal-prompt">└─$</span>
-                            <span class="terminal-command"> sqlmap -u "target.com" --dbs</span>
+                            <span class="terminal-command"> splunk search "EventCode=4625"</span>
                         </div>
-                        <div class="terminal-line terminal-output">Testing for SQL injection...</div>
-                        <div class="terminal-line terminal-output">Vulnerability detected!</div>
+                        <div class="terminal-line terminal-output">Analyzing security events...</div>
+                        <div class="terminal-line terminal-output">Suspicious activity detected!</div>
                         <div class="terminal-line">&nbsp;</div>
                         <div class="terminal-line">
                             <span class="terminal-prompt">└─$</span>
-                            <span class="terminal-command"> msfconsole</span>
+                            <span class="terminal-command"> impacket-secretsdump</span>
                         </div>
-                        <div class="terminal-line terminal-output">Loading modules...</div>
+                        <div class="terminal-line terminal-output">Dumping credentials...</div>
                         <div class="terminal-line">&nbsp;</div>
                         <div class="terminal-line">
                             <span class="terminal-prompt">└─$</span>
@@ -777,14 +871,27 @@
     <section id="about">
         <div class="container">
             <div class="section-header">
-                <div class="section-label">// About Me</div>
                 <h2 class="section-title">Who I Am</h2>
                 <p class="section-description">
-                    I'm a recent cybersecurity graduate with a passion for penetration testing and ethical hacking. 
-                    I enjoy finding vulnerabilities in systems and applications, and I'm constantly learning new 
-                    techniques through platforms like HackTheBox and TryHackMe. My goal is to help organizations 
-                    strengthen their security posture through thorough testing and clear communication.
+                    I'm a recent cybersecurity graduate with hands-on experience in both offensive and defensive security operations. 
+                    From penetration testing and Active Directory exploitation to SIEM implementation and threat detection, 
+                    I bring a comprehensive understanding of the cybersecurity landscape. My passion lies in protecting organizations 
+                    by thinking like an attacker while building robust defensive strategies.
                 </p>
+            </div>
+
+            <!-- Platform Badges -->
+            <div class="platform-badges">
+                <div class="platform-badge-wrapper">
+                    <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=3656286" style='border:none; width: 100%; height: 300px;'></iframe>
+                </div>
+                <a href="https://app.hackthebox.com/public/users/2171617" class="platform-badge" target="_blank">
+                    <div class="platform-icon htb">⬢</div>
+                    <div class="platform-info">
+                        <h4>HackTheBox</h4>
+                        <p>View My Profile</p>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
@@ -793,85 +900,80 @@
     <section id="projects">
         <div class="container">
             <div class="section-header">
-                <div class="section-label">// My Work</div>
                 <h2 class="section-title">Featured Projects</h2>
-                <p class="section-description">Here are some of my best pentesting challenges and security projects. Check out my GitHub for more work!</p>
+                <p class="section-description">A showcase of my cybersecurity projects spanning offensive security, defensive operations, and threat detection.</p>
             </div>
             <div class="projects-grid">
-                <!-- Project Card 1 -->
+                <!-- Project Card 1: AD Lab -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">🔐</div>
+                        <div class="project-links">
+                            <a href="https://github.com/harisazhr/ad-pentest-lab" title="GitHub" target="_blank">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <h3>Active Directory Penetration Testing Lab</h3>
+                    <p>Complete AD environment demonstrating advanced attack chains from Kerberoasting to Golden Tickets, with full SIEM detection using Splunk Enterprise.</p>
+                    <div class="project-tags">
+                        <span class="tag">Active Directory</span>
+                        <span class="tag">Kerberos</span>
+                        <span class="tag">DCSync</span>
+                        <span class="tag blue-team">Splunk SIEM</span>
+                        <span class="tag blue-team">Threat Detection</span>
+                    </div>
+                </div>
+
+                <!-- Project Card 2: Rabbit Store -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">🐇</div>
+                        <div class="project-links">
+                            <a href="https://github.com/harisazhr/rabbit-store-ctf" title="GitHub" target="_blank">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <h3>Rabbit Store - TryHackMe CTF</h3>
+                    <p>Medium-difficulty challenge showcasing web exploitation through Mass Assignment, SSRF, SSTI, and RabbitMQ service compromise to achieve root access.</p>
+                    <div class="project-tags">
+                        <span class="tag">Web Exploitation</span>
+                        <span class="tag">SSRF</span>
+                        <span class="tag">SSTI</span>
+                        <span class="tag">RabbitMQ</span>
+                    </div>
+                </div>
+
+                <!-- Project Card 3: Kioptrix -->
                 <div class="project-card">
                     <div class="project-header">
                         <div class="project-icon">🎯</div>
                         <div class="project-links">
-                            <a href="https://github.com/harisazhr/project-name" title="GitHub" target="_blank">
+                            <a href="https://github.com/harisazhr/kioptrix-level1" title="GitHub" target="_blank">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                                 </svg>
                             </a>
-                            <a href="#" title="Write-up" target="_blank">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                    <polyline points="15 3 21 3 21 9"></polyline>
-                                    <line x1="10" y1="14" x2="21" y2="3"></line>
-                                </svg>
-                            </a>
                         </div>
                     </div>
-                    <h3>Project Title 1</h3>
-                    <p>Brief description of your first major project. Explain what you did, what vulnerabilities you found, and what techniques you used.</p>
+                    <h3>Kioptrix Level 1 - Vulnerable VM Assessment</h3>
+                    <p>Classic Linux penetration test demonstrating buffer overflow exploitation of Samba 2.2.1a (CVE-2003-0201) to achieve root access on deliberately vulnerable system.</p>
                     <div class="project-tags">
                         <span class="tag">Linux</span>
-                        <span class="tag">Web Exploitation</span>
-                        <span class="tag">PrivEsc</span>
-                    </div>
-                </div>
-
-                <!-- Project Card 2 -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">🔓</div>
-                        <div class="project-links">
-                            <a href="https://github.com/harisazhr/project-name" title="GitHub" target="_blank">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <h3>Project Title 2</h3>
-                    <p>Brief description of your second major project. Highlight the tools you built, automation scripts, or security analysis you performed.</p>
-                    <div class="project-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">Automation</span>
-                        <span class="tag">OSINT</span>
-                    </div>
-                </div>
-
-                <!-- Project Card 3 -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">🏴</div>
-                        <div class="project-links">
-                            <a href="https://github.com/harisazhr/project-name" title="GitHub" target="_blank">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <h3>Project Title 3</h3>
-                    <p>Brief description of your third major project. Describe the challenge, your approach, and the outcome or lessons learned.</p>
-                    <div class="project-tags">
-                        <span class="tag">Active Directory</span>
-                        <span class="tag">Windows</span>
-                        <span class="tag">Lateral Movement</span>
+                        <span class="tag">Buffer Overflow</span>
+                        <span class="tag">Samba Exploitation</span>
                     </div>
                 </div>
             </div>
 
             <!-- View More Button -->
             <div style="text-align: center; margin-top: 3rem;">
-                <a href="https://github.com/harisazhr/MyProject/blob/972d0c9f0a6724816812ed68a202a5a63667b789/README.md" class="btn btn-primary" target="_blank">
+                <a href="https://github.com/harisazhr/MyProject" class="btn btn-primary" target="_blank">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle; margin-right: 8px;">
                         <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                     </svg>
@@ -885,49 +987,68 @@
     <section id="skills">
         <div class="container">
             <div class="section-header">
-                <div class="section-label">// Technical Skills</div>
                 <h2 class="section-title">My Arsenal</h2>
             </div>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>Pentesting Tools</h3>
+                    <h3>🔴 Red Team / Offensive</h3>
                     <ul>
-                        <li>Burp Suite</li>
-                        <li>Metasploit</li>
-                        <li>Nmap</li>
-                        <li>SQLMap</li>
-                        <li>Wireshark</li>
-                        <li>Hashcat</li>
+                        <li>Penetration Testing</li>
+                        <li>Active Directory Attacks</li>
+                        <li>Web Application Testing</li>
+                        <li>Vulnerability Assessment</li>
+                        <li>Exploit Development</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>Programming</h3>
+                    <h3>🔵 Blue Team / Defensive</h3>
+                    <ul>
+                        <li>SIEM (Splunk)</li>
+                        <li>Threat Detection</li>
+                        <li>Incident Response</li>
+                        <li>Log Analysis</li>
+                        <li>Security Monitoring</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>🛠️ Tools & Technologies</h3>
+                    <ul>
+                        <li>Burp Suite</li>
+                        <li>Metasploit</li>
+                        <li>Nmap / Nessus</li>
+                        <li>Impacket Suite</li>
+                        <li>BloodHound</li>
+                        <li>Wireshark</li>
+                        <li>Hashcat / John</li>
+                        <li>CrackMapExec</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>💻 Programming & Scripting</h3>
                     <ul>
                         <li>Python</li>
                         <li>Bash Scripting</li>
                         <li>PowerShell</li>
-                        <li>JavaScript</li>
-                        <li>SQL</li>
+                        <li>SQL / SQLMap</li>
+                        <li>Splunk SPL</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>Methodologies</h3>
+                    <h3>📚 Methodologies & Frameworks</h3>
                     <ul>
                         <li>OWASP Top 10</li>
-                        <li>PTES</li>
                         <li>MITRE ATT&CK</li>
+                        <li>NIST Cybersecurity</li>
+                        <li>Kill Chain</li>
                         <li>OSINT</li>
-                        <li>Social Engineering</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>Platforms</h3>
+                    <h3>🎯 Training Platforms</h3>
                     <ul>
                         <li>HackTheBox</li>
                         <li>TryHackMe</li>
-                        <li>VulnHub</li>
                         <li>CTF Competitions</li>
-                        <li>DVWA / WebGoat</li>
                     </ul>
                 </div>
             </div>
@@ -938,13 +1059,14 @@
     <section id="certifications" class="certifications">
         <div class="container">
             <div class="section-header">
-                <div class="section-label">// Certifications</div>
                 <h2 class="section-title">Professional Credentials</h2>
                 <p class="section-description">Industry-recognized certifications validating my cybersecurity expertise.</p>
             </div>
             <div class="cert-grid">
                 <div class="cert-card">
-                    <div class="cert-badge">🛡️</div>
+                    <div class="cert-badge-credly">
+                        <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="fe4b4dd2-ab4e-4b91-8110-36fb13898f06" data-share-badge-host="https://www.credly.com"></div>
+                    </div>
                     <div class="cert-info">
                         <h3>CompTIA Security+</h3>
                         <div class="cert-issuer">CompTIA</div>
@@ -953,6 +1075,7 @@
                 </div>
                 <!-- Add more certifications here as you earn them -->
             </div>
+            <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
         </div>
     </section>
 
@@ -960,10 +1083,9 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="contact-content">
-                <div class="section-label">// Get In Touch</div>
                 <h2 class="section-title">Let's Connect</h2>
                 <p class="section-description">
-                    I'm currently looking for penetration testing opportunities. Whether you have a question or just want to say hi, feel free to reach out!
+                    I'm currently seeking opportunities in penetration testing, security operations (SOC), or incident response. Whether you have a question or want to discuss cybersecurity, feel free to reach out!
                 </p>
                 <div class="contact-links">
                     <a href="mailto:harisazhar02@gmail.com" class="contact-link">
@@ -1026,13 +1148,13 @@
 
         // Terminal typing animation
         const commands = [
-            'whoami',
-            'ls -la',
-            'cat /etc/passwd',
-            'netstat -tulpn',
-            'python exploit.py',
+            'bloodhound-python -u suser',
+            'impacket-secretsdump lab.local',
+            'splunk search "EventCode=4625"',
+            'nmap -sV -sC target.com',
             'john --wordlist=rockyou.txt hash.txt',
-            'hydra -l admin -P passwords.txt ssh://target'
+            'crackmapexec smb 192.168.1.0/24',
+            'python3 exploit.py --target 10.10.10.10'
         ];
         let commandIndex = 0;
         let charIndex = 0;
