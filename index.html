@@ -446,8 +446,14 @@
             gap: 2rem;
         }
 
-        a.project-card {
-             text-decoration: none;
+        .project-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
         }
 
         .project-card::before {
@@ -930,7 +936,7 @@
             </div>
             <div class="projects-grid">
                 <!-- Project Card 1: AD Lab -->
-                <a href="https://github.com/harisazhr/AD_Penetration_Testing_Lab" class="project-card" target="_blank">
+                <div class="project-card">
                     <div class="project-header">
                         <div class="project-icon">🔐</div>
                         <div class="project-links">
@@ -940,8 +946,7 @@
                                 </svg>
                             </a>
                         </div>
-                        </div>
-                    </a>
+                    </div>
                     <h3>Active Directory Penetration Testing Lab</h3>
                     <p>Complete AD environment demonstrating advanced attack chains from Kerberoasting to Golden Tickets, with full SIEM detection using Splunk Enterprise.</p>
                     <div class="project-tags">
@@ -951,10 +956,11 @@
                         <span class="tag blue-team">Splunk SIEM</span>
                         <span class="tag blue-team">Threat Detection</span>
                     </div>
+                    <a href="https://github.com/harisazhr/AD_Penetration_Testing_Lab" class="project-btn" target="_blank"> View Project →</a>
                 </div>
 
                 <!-- Project Card 2: Rabbit Store -->
-                <a href="https://github.com/harisazhr/Rabbit_Store_TryHackMe_Writeup" class="project-card" target="_blank">
+                <div class="project-card">
                     <div class="project-header">
                         <div class="project-icon">🐇</div>
                         <div class="project-links">
@@ -964,8 +970,7 @@
                                 </svg>
                             </a>
                         </div>
-                        </div>
-                    </a>
+                    </div>
                     <h3>Rabbit Store - TryHackMe CTF</h3>
                     <p>Medium-difficulty challenge showcasing web exploitation through Mass Assignment, SSRF, SSTI, and RabbitMQ service compromise to achieve root access.</p>
                     <div class="project-tags">
@@ -974,10 +979,11 @@
                         <span class="tag">SSTI</span>
                         <span class="tag">RabbitMQ</span>
                     </div>
+                    <a href="https://github.com/harisazhr/Rabbit_Store_TryHackMe_Writeup" class="project-btn" target="_blank"> View Project →</a>
                 </div>
 
                 <!-- Project Card 3: Kioptrix -->
-                <a href="https://github.com/harisazhr/Kioptriox-level-1" class="project-card" target="_blank">
+                <div class="project-card">
                     <div class="project-header">
                         <div class="project-icon">🎯</div>
                         <div class="project-links">
@@ -987,8 +993,7 @@
                                 </svg>
                             </a>
                         </div>
-                        </div>
-                    </a>
+                    </div>
                     <h3>Kioptrix Level 1 - Vulnerable VM Assessment</h3>
                     <p>Classic Linux penetration test demonstrating buffer overflow exploitation of Samba 2.2.1a (CVE-2003-0201) to achieve root access on deliberately vulnerable system.</p>
                     <div class="project-tags">
@@ -996,6 +1001,7 @@
                         <span class="tag">Buffer Overflow</span>
                         <span class="tag">Samba Exploitation</span>
                     </div>
+                    <a href="https://github.com/harisazhr/Kioptriox-level-1" class="project-btn" target="_blank"> View Project →</a>
                 </div>
             </div>
 
