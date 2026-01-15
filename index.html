@@ -367,6 +367,8 @@
             display: flex;
             flex-direction: column;
             gap: 2rem;
+            margin-top: 3rem;
+            align-items: center;
         }
 
         .platform-badge-wrapper {
@@ -378,6 +380,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            width: 100%;
+            max-width: 400px;
         }
 
         .platform-badge-wrapper:hover {
@@ -385,7 +389,7 @@
         }
 
         .platform-badge {
-            background: var(--bg-card);
+            background: transparent;
             border: none;
             border-radius: 12px;
             padding: 1.5rem 2rem;
@@ -397,6 +401,7 @@
             text-decoration: none;
             color: var(--text-primary);
             width: 100%;
+            max-width: 400px;
         }
 
         .platform-badge:hover {
@@ -909,7 +914,7 @@
                 <!-- Platform Badges -->
                 <div class="platform-badges">
                     <div class="platform-badge-wrapper">
-                        <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=3656286" style='border:none; width: 100%; height: 100px;'></iframe>
+                        <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=3656286" style='border:none; width: 100%; height: 200px;'></iframe>
                     </div>
                     <a href="https://app.hackthebox.com/public/users/2171617" class="platform-badge" target="_blank">
                         <div class="platform-icon htb">⬢</div>
